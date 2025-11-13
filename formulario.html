@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Formulario de inscripción</title>
+</head>
+<body>
+    <h2>¡Inscríbete al Newsletter!</h2>
+    <a href="./index.html"><i class="fa-solid fa-arrow-left"></i></a>
+    <hr>
+   <form action="URLdeDestino.html" method="post"> 
+        
+        <fieldset>
+            <legend>Datos Personales</legend>
+            
+            <p>
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" required placeholder="Tu nombre">
+            </p>
+            
+            <p>
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" name="apellidos" id="apellidos" required placeholder="Tus apellidos">
+            </p>
+            
+            <p>
+             <label for="email">Correo Electrónico:</label>
+             <!-- Uso de type="email" para validación de formato -->
+             <input type="email" name="email" id="email" required placeholder="ejemplo@correo.com">
+            </p>
+
+            <p>
+             <label for="edad">Edad:</label>
+            <!-- Uso de type="number" para asegurar que sea un número -->
+            <input type="number" name="edad" id="edad" required placeholder="Tu edad">
+            </p>
+            
+            <p>
+            <label for="pais">País:</label>
+            <!-- Uso de <select> para limitar las opciones de país -->
+            <select name="pais" id="pais" required>
+                <option value="">-- Selecciona un País --</option>
+                <option value="ES">España</option>
+                <option value="MX">México</option>
+                <option value="AR">Argentina</option>
+                <option value="CO">Colombia</option>
+                <option value="CL">Chile</option>
+                <option value="OT">Otros</option>
+            </select>
+            </p>
+        </fieldset>
+
+        <fieldset>
+        <legend>Intereses</legend>
+        <p>¿Cuáles son tus intereses? (Puedes seleccionar varios):</p>
+        
+        <div>
+            <!-- Uso de type="checkbox" para permitir múltiples selecciones -->
+            <input type="checkbox" name="intereses[]" value="conciertos" id="interes_conciertos">
+            <label for="interes_conciertos">Anuncios de Conciertos y Giras</label>
+        </div>
+        
+        <div>
+            <input type="checkbox" name="intereses[]" value="musica_nueva" id="interes_musica">
+            <label for="interes_musica">Nuevos Lanzamientos Musicales</label>
+        </div>
+        
+        <div>
+            <input type="checkbox" name="intereses[]" value="merchandising" id="interes_merch">
+            <label for="interes_merch">Merchandising y Ofertas</label>
+        </div>
+            
+        </fieldset>
+        
+        <br>
+        <button type="submit">Inscribirse</button>
+        
+        
+    </form>
+</body>
+</html>
